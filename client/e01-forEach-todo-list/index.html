@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .done-true {
+      text-decoration:line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>TO-DO</h1>
+  <div id="todo_list"></div>
+
+  <script>
+    tasks = [
+      {done: true, title: "Programar código inicial para el ejercicio"},
+      {done: false, title: "Agregar evento para tachar texto"},
+      {done: false, title: "Publicarlo en Aportes"},
+      {done: false, title: "Que alguién tache la última tarea"}
+    ]
+
+    todoList = document.getElementById('todo_list');
+
+    tasks.forEach( (task, index) => {
+      let checkbox = ''; 
+
+      todoList.innerHTML += 
+        `<div>
+          <label id="lbl_task_${index}" class="done-${task.done}">
+            <input id="chk_task_${index}" type="checkbox"/>
+            ${task.title}
+          </label>
+        </div>`;
+    });
+
+    tasks.forEach( (task, index) => {
+      checkbox = document.getElementById(`chk_task_${index}`);
+      checkbox.checked = task.done;
+    });
+
+  </script>
+</body>
+</html>
