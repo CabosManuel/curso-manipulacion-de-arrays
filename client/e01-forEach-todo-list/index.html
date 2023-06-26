@@ -6,7 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <!-- Google Font - Rubik https://fonts.google.com/specimen/Rubik-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
   <style>
+    * {font-family: Rubik;}
+
     .done-true {
       text-decoration:line-through;
     }
@@ -19,15 +26,17 @@
   <script>
     tasks = [
       {done: true, title: "Programar código inicial para el ejercicio"},
-      {done: false, title: "Agregar evento para tachar texto"},
-      {done: false, title: "Publicarlo en Aportes"},
-      {done: false, title: "Que alguién tache la última tarea"}
+      {done: true, title: "Agregar evento para tachar texto"},
+      {done: true, title: "Cambiar fuente de texto"},
+      {done: true, title: "Publicarlo en APORTES"},
+      {done: false, title: "Que alguien tache la última tarea"}
     ]
 
     todoList = document.getElementById('todo_list');
 
     tasks.forEach( (task, index) => {
-      let checkbox = ''; 
+      let checkbox = '';
+      let label = '';
 
       todoList.innerHTML += 
         `<div>
@@ -38,10 +47,31 @@
         </div>`;
     });
 
+    // Marcar tareas completadas
     tasks.forEach( (task, index) => {
       checkbox = document.getElementById(`chk_task_${index}`);
       checkbox.checked = task.done;
     });
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Evento para marcar / desmarcar
+    function eventCheck(checkbox) {
+      checkbox.addEventListener('change', () => {
+        const label = checkbox.parentNode; // Elemento padre (label)
+
+        if (checkbox.checked) {
+          label.classList.remove('done-false');
+          label.classList.add('done-true');
+        } else {
+          label.classList.remove('done-true');
+          label.classList.add('done-false');
+        }
+      });
+    }
+
+    // Recorrer cada checkbox y adjuntar evento
+    checkboxes.forEach(eventCheck);
 
   </script>
 </body>
