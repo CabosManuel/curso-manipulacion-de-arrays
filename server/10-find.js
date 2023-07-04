@@ -9,12 +9,14 @@ for (let i = 0; i < numbers.length; i++) {
 		break;
 	}
 }
-console.log('forThirty', forThirty);
+console.log('forThirty', forThirty); // undefinend
 
 // vs
 
+const findThirtyU = numbers.find(n => n === 301);
+console.log('findThirtyU', findThirtyU); // undefined
 const findThirty = numbers.find(n => n === 30);
-console.log('findThirty', findThirty);
+console.log('findThirty', findThirty); // 30
 
 
 // find() con objetos -------------------------------------------
@@ -26,7 +28,7 @@ const products = [
 ];
 
 const findProduct = products.find(p => p.id === '🌭');
-console.log('findProduct', findProduct);
+console.log('findProduct', findProduct); // findProduct { name: 'Hot dog', price: 34, id: '🌭' }
 
 const findProductIndex = products.findIndex(p => p.id === '🍔');
-console.log('findProductIndex', findProductIndex);
+console.log('findProductIndex', findProductIndex); // findProductIndex 1
