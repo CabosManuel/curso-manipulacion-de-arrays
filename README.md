@@ -1,3 +1,3 @@
 [![wakatime](https://wakatime.com/badge/user/9e0548e0-ba44-4650-b0f1-5ece84453209/project/88be1836-97e7-42ef-aeef-38d13ebe677b.svg)](https://wakatime.com/badge/user/9e0548e0-ba44-4650-b0f1-5ece84453209/project/88be1836-97e7-42ef-aeef-38d13ebe677b)
-# [📗 Array Manipulation in JavaScript Course](https://platzi.com/cursos/arrays/)
- - 👨‍🎓 **Certificate: [paltzi/CabosManuel](https://platzi.com/p/CabosManuel/curso/2461-arrays/diploma/detalle/)**
+# [📗 Curso de Manipulación de Arrays en JavaScript](https://platzi.com/cursos/arrays/)
+ - 👨‍🎓 **Certificado: [paltzi/CabosManuel](https://platzi.com/p/CabosManuel/curso/2461-arrays/diploma/detalle/)**
